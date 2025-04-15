@@ -1,73 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Contact Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border: 1px solid #dddddd;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            background-color: #005eb8; /* NHS Blue */
-            color: #ffffff;
-            padding: 10px 20px;
-            text-align: left;
-            font-size: 18px;
-            margin: -20px -20px 20px -20px;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .content h2 {
-            font-size: 16px;
-            color: #333333;
-        }
-
-        .content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .content ul li {
-            font-size: 14px;
-            color: #333333;
-            margin: 8px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paracetamol - UMMC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f5;
+      color: #212b32;
+      line-height: 1.6;
+    }
+    header {
+      background: #005eb8;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    nav {
+      background: #e7e7e7;
+      padding: 1rem;
+      width: 250px;
+      position: fixed;
+      top: 70px;
+      bottom: 0;
+      overflow-y: auto;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin-bottom: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #005eb8;
+      font-weight: bold;
+    }
+    main {
+      margin-left: 270px;
+      padding: 2rem;
+      background: white;
+    }
+    h1, h2 {
+      color: #005eb8;
+    }
+    .warning-box {
+      border: 1px solid #b7b7b7;
+      background: #e7e7e7;
+      padding: 1rem;
+      margin: 2rem 0;
+    }
+    .warning-box.red {
+      background: #f8d7da;
+      border-left: 6px solid #d9534f;
+    }
+    .warning-box.blue {
+      background: #d1ecf1;
+      border-left: 6px solid #117a8b;
+    }
+    .warning-box.orange {
+      background: #fff3cd;
+      border-left: 6px solid #ff8800;
+    }
+    .warning-header {
+      background: #d9534f;
+      color: white;
+      padding: 0.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .warning-header.blue {
+      background: #005eb8;
+    }
+    .warning-header.orange {
+      background: #ff8800;
+    }
+    .warning-header::before {
+      content: "⚠️";
+      margin-right: 0.5rem;
+    }
+    footer {
+      background: #003a63;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        width: auto;
+        margin-bottom: 2rem;
+      }
+      main {
+        margin: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <strong>Call 100 or your doctor now if:</strong>
-        </div>
-        <div class="content">
-            <ul>
-                <li>Loss of consciousness</li>
-                <li>Chest pain or pressure</li>
-                <li>Difficulty breathing</li>
-                <li>Severe bleeding that cannot be stopped</li>
-                <li>Serious allergic reactions</li>
-                <li>Major trauma, such as a road traffic accident</li>
-            </ul>
-        </div>
-    </div>
+<header>
+  UMMC Health Guide
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About Paracetamol</a></li>
+    <li><a href="#who">Who Can Take It</a></li>
+    <li><a href="#how">How and When to Take It</a></li>
+    <li><a href="#side-effects">Side Effects</a></li>
+    <li><a href="#pregnancy">Pregnancy and Breastfeeding</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Paracetamol</h1>
+  <p>Paracetamol is a common painkiller used to treat aches and pain. It can also be used to reduce a high temperature (fever).</p>
+
+  <div class="warning-box red">
+    <div class="warning-header">Call 999 now if:</div>
+    <ul>
+      <li>You or someone you care for has difficulty breathing.</li>
+      <li>You experience a severe allergic reaction.</li>
+    </ul>
+  </div>
+
+  <div class="warning-box blue">
+    <div class="warning-header blue">Speak to your doctor if:</div>
+    <ul>
+      <li>You have liver or kidney problems.</li>
+      <li>You regularly drink large amounts of alcohol.</li>
+    </ul>
+  </div>
+
+  <div class="warning-box orange">
+    <div class="warning-header orange">Important:</div>
+    <ul>
+      <li>Do not take more than the recommended dose.</li>
+      <li>Always read the label or leaflet that comes with your medicine.</li>
+    </ul>
+  </div>
+
+  <h2 id="about">About Paracetamol</h2>
+  <p>Paracetamol is used to relieve mild to moderate pain and reduce fever. It is suitable for most people but should be taken as directed.</p>
+
+  <h2 id="who">Who Can Take Paracetamol</h2>
+  <p>Most adults and children over 2 months old can take paracetamol. Check with a pharmacist or doctor if you're unsure.</p>
+
+  <h2 id="how">How and When to Take It</h2>
+  <p>Follow the instructions on the packaging or from your healthcare professional. Do not exceed the recommended dose.</p>
+
+  <h2 id="side-effects">Side Effects</h2>
+  <p>Side effects from paracetamol are rare but can include allergic reactions and liver damage from overdose.</p>
+
+  <h2 id="pregnancy">Pregnancy and Breastfeeding</h2>
+  <p>Paracetamol is generally safe to take during pregnancy and breastfeeding, but you should consult with your doctor first.</p>
+</main>
+
+<footer>
+  &copy; 2025 UMMC. All rights reserved.
+</footer>
 
 </body>
 </html>
